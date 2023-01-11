@@ -1,7 +1,7 @@
 
 
 // jenkinsForJava.groovy
-def call(map params) {
+def call() {
   pipeline {
        agent any
        tools {
