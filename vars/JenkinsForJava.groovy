@@ -1,7 +1,7 @@
 
 
 // jenkinsForJava.groovy
-def call(String repoUrl) {
+def call(map params) {
   pipeline {
        agent any
        tools {
@@ -18,7 +18,7 @@ def call(String repoUrl) {
            stage("Checkout Code") {
                steps {
                    git branch: 'master',
-                       url: "${repoUrl}"
+                       url: 'https://github.com/devopspractice64/spring-boot-data-H2-embedded.git'
                }
            }
            stage("Cleaning workspace") {
